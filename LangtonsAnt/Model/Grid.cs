@@ -87,7 +87,7 @@ namespace LangtonsAnt.Model
                 if (value != null)
                 {
                     _gridCells = new ObservableCollection<Cell>(value);
-                    RaisePropertyChanged("GridCells");
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -138,7 +138,7 @@ namespace LangtonsAnt.Model
 
                             // The cell containing the ant has been located - set the ant's current direction.
                             gridCell.AntDirection = value;
-                            RaisePropertyChanged("AntDirection");
+                            RaisePropertyChanged();
 
                             break;  // Exit the loop.
                         }
@@ -161,7 +161,7 @@ namespace LangtonsAnt.Model
                 if (value >= Constants.MinimumStepIntervalMilliSeconds && value <= Constants.MaximumStepIntervalMilliSeconds)
                 {
                     _stepIntervalMilliSeconds = value;
-                    RaisePropertyChanged("StepIntervalMilliSeconds");
+                    RaisePropertyChanged();
 
                     if (_stepTimer != null && _stepTimer.IsEnabled)
                     {
@@ -184,7 +184,7 @@ namespace LangtonsAnt.Model
             private set
             {
                 _isGameRunning = value;
-                RaisePropertyChanged("IsGameRunning");
+                RaisePropertyChanged();
             }
         }
 

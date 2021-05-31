@@ -58,7 +58,7 @@ namespace LangtonsAnt.Model
             set
             {
                 _cellColour = value;
-                RaisePropertyChanged("CellColour");
+                RaisePropertyChanged();
             }
         }
 
@@ -74,7 +74,7 @@ namespace LangtonsAnt.Model
             set
             {
                 _containsAnt = value;
-                RaisePropertyChanged("ContainsAnt");
+                RaisePropertyChanged();
             }
         }
 
@@ -90,7 +90,7 @@ namespace LangtonsAnt.Model
             set
             {
                 _antDirection = value;
-                RaisePropertyChanged("AntDirection");
+                RaisePropertyChanged();
             }
         }
 
